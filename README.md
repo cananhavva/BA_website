@@ -1,4 +1,6 @@
 # BA_website
-html 
-css
-javascript
+html5
+css3
+JavaScript
+JQuery
+bootstrap 5.1
