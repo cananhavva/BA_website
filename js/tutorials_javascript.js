@@ -344,10 +344,10 @@
 // console.log(tarih.setDate(2));
 // console.log(tarih.getDate());
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
-// var object1=new Object();   
+// var object1=new Object();
 // var object2={}
 
-// var dizi1=new Array();   
+// var dizi1=new Array();
 // var dizi2=[]
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -361,48 +361,92 @@
 // console.log(m);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
-
-// var x,y,z;
-// x=5;
-// y=45;
-// z=63;
-// var m=x+y+z;
+// var x, y, z;
+// x = 5;
+// y = 45;
+// z = 63;
+// var m = x + y + z;
 // console.log(m);
 // console.log(m);
-//////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
 //dizi
-var dizi=["İstanbul ", "Ankara","Muş","Van"]
-console.log(dizi);
-console.log(dizi[0].concat("sona44"));
+// var dizi = ["çstanbul", "üAnkara", "1Bursa", "2Van"];
+// dizi.sort();
+// console.log(dizi);
+// console.log(dizi);
+// console.log(dizi[0].concat(" sona44"));
 
-for(let index=0; index<dizi.length; index++){
-  console.log(dizi[index]);
+// for (let index = 0; index < dizi.length; index++) {
+//   console.log(dizi[index]);
+// }
+
+// //eklemek
+// //push:sona bir eleman ekle
+// dizi.push(" sona ekledim");
+// console.log(dizi);
+
+// //unshift:baştan bir eleman ekle
+// dizi.unshift(" başa ekledim");
+// console.log(dizi);
+
+// //çıkarmak
+// //son elemanda bir tanesi çıkar
+// //LIFO
+// var deneme = dizi.pop();
+// console.log(dizi);
+
+// //baştaki elemandan bir tane çıkar
+// dizi.shift();
+// console.log(dizi);
+
+// delete dizi[0];
+// console.log(dizi);
+
+// dizi.sort();
+// console.log("baştan sona" + dizi);
+
+// dizi.reverse();
+// console.log("sondan başa" + dizi);
+
+// var dizi2=dizi.reverse();
+// var join4=dizi2.join("*");
+
+//diziyi String'e çevirmek
+// var dizi2 = ["Sercan", "Melih", "Mustafa", "Çağrı"];
+// console.log(dizi2[0].toString().concat("9"));
+//  console.log(dizi2);
+//  console.log(dizi2.join("+"));
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//DOM: Document OBject Model
+// document.getElementById("dom_id").style.color = "blue";
+// document.querySelector("#dom_id").style.fontSize ="400px";
+
+// document.getElementsByClassName("dom_class")[0].style.fontSize = "255px";
+// document.querySelector(".dom_class").style.fontSize ="400px";
+
+// document.getElementsByName("dom_name")[0].style.backgroundColor = "red";
+// document.getElementsByTagName("p")[0].style.color = "yellow";
+
+//selector
+document.querySelector("#dom > .deneme2").style.color = "red";
+//id de # class ta . kullanılır
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//event
+function tarihGoster() {
+  //alert(new Date());
+  document.getElementById("tarih").innerHTML =
+    "<b> <i>" + new Date() + "</i></b>";
+  document.getElementById("tarih2").innerText =
+    "<b> <i>" + new Date() + "</i></b>";
 }
-//eklemek 
-//push sona eklemek
-dizi.push("sona ekledim");
-console.log(dizi);
-
-//unshift başa eklemek
-dizi.unshift("başa ekledim");
-console.log(dizi);
-
-//çıkarmak (sondan)
-dizi.pop();
-console.log(dizi);
-
-//baştaki elemandan bir eleman çıkar
-dizi.shift();
-console.log(dizi);
-
-//silmek için kullanılır.
-delete dizi[0];
-console.log(dizi);
-
-
-
-
-
-
+//inner text style da kullanılır.
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//listener
+var count = 0;
+document.getElementById("button_id2").addEventListener("onmouseup", () => {
+  count++;
+  alert(count + " Tıklandı");
+});
 
 
