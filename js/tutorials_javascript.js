@@ -1,27 +1,62 @@
+//"use strict"
+
 // Ctrl+k+c =yorumlama kapatır
 // Ctrl+k+u =yorumu açar
 
 //js comment
 /* multiple comment*/
 // window.alert("Ekranda göster");
+// alert("kısaltılmış hali");
+// console.log("console log");
+// console.info("console info");
+// console.error("console error");
 
-// //sayi=16;
+// document.write("document write yazdım")
+
+//*************************************************************************
+//type
+// var sayi="kelime",sayi2;
+// sayi=true;
+// //sayi=34.56;
+// //sayi=44;
 
 // alert(typeof sayi)
-//instanceof
+// instanceof
 // alert(sayi);
 
 //***********************************************************************
+// var sayi2 = "44",
+//   result;
+// result = sayi2  / "22";
+// alert(result);
 
+//*************************************************************************
+//global değişkenler için kullaalım
+// var deneme1 = "485";
+// deneme1 = true;
+
+// //local dğişkenker
+// let deneme2 = "5555";
+// deneme2 = true;
+
+// //değişken değerinideğiştiremezsiniz
+// const deneme3 = "5555";
+// deneme3 = "99656";
+
+//*************************************************************************
+// var $44_deneme=55;
+// var _44_deneme=55;
+// alert($44_deneme)
+
+//*************************************************************************
+// var sayi = 55;
+
+//js dizi
+// var dizi = ["asd", true, 55];
+// console.log(dizi);
 // alert(dizi[0]);
 
 //js object
-var object = {
-  adi: "Canan",
-  soyadi: "Arslan",
-  teknoloji: ["Java", "JSP"],
-};
-console.log(object);
 // var object = {
 //   adi: "Canan",
 //   soyadi: "Arslan",
@@ -34,7 +69,7 @@ console.log(object);
 //#endregion
 
 //NaN
-// var sayi = 16 / "asd";
+// var sayi = 44 / "asd";
 // console.log(sayi);
 
 // //undefined
@@ -92,7 +127,7 @@ console.log(object);
 // console.log(Math.pow(sayi, 2));
 // console.log(sayi**=2));
 
-//escape character :
+//escape ccharacter :
 // alert("\"")
 // console.log(4/"sa") ==> NaN
 // var sayi;
@@ -108,9 +143,9 @@ console.log(object);
 // }
 
 //sayı
-// var sayi = 16e-5;
+// var sayi = 44e-5;
 // alert(Number("55"));
-// sayi = 16e6;
+// sayi = 44e6;
 // console.log(sayi);
 
 // //sayı sistemleri
@@ -138,4 +173,236 @@ console.log(object);
 // console.log(kelime);
 
 // //****************************************************************************
-// //  function
+// //  function: sürekli kodlar , kodlarda iyi yazılması ,
+
+//parametresiz function
+// function deneme() {
+//   alert("Merhabalar Function");
+// }
+// deneme();
+//////////////////////////////
+//parametreli function
+// function deneme2(sayi) {
+//   alert("Function2: " + Math.pow(sayi, 2));
+// }
+// deneme2( Number(4.16));
+
+//////////////////////////////
+//değişkende kullanabileceğim bir function lazımsa
+//Javadaki ==> void olmayan
+// function deneme3(sayi) {
+//   return Math.pow(sayi, 2);
+// }
+// var _temp = deneme3(Number(4.16));
+// alert(_temp);
+
+/// kullanıcıdan girilen bir sayının negatif olup olmadığını hesaplayan algoritma ?
+// if else
+//function
+// var userPoint = Number(prompt("Lütfen bir sayı giriniz"));
+// //1.yol
+// if (userPoint < 0) {
+//   console.log("Negatif");
+// } else {
+//   console.log("Pozitif");
+// }
+
+////2.YOL
+// () ? true:false;
+// var deneme4 = (userPoint < 0) ? "Negatif" : "Pozitif ";
+// console.log(deneme4);
+
+// function deneme5(number1) {
+//   if (number1 < 0) {
+//     console.log("Negatif");
+//   } else {
+//     console.log("Pozitif");
+//   }
+// }
+// deneme5(userPoint);
+
+/////////////////////////////////////////
+//anonymous:anonim bilinmeyen : atasözlerimiz
+// function name4(params) {
+//   alert("deneme");
+// }
+
+//name4();
+
+//1-normal değişkene verdiğim fonkisyon
+// var deneme5 = function adi() {
+//   alert("deneme");
+// };
+// deneme5();
+
+//2-)anonymous function
+// var deneme6 = function () {
+//   alert("deneme6");
+// };
+// deneme6();
+
+//3-)()=>{}
+// var deneme7 = () => {
+//   alert("deneme7");
+// };
+//deneme7();
+
+//4-)()=>{},
+// var deneme7 = (sayi) => {
+//   alert(sayi * sayi);
+// };
+// deneme7(4);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+//6 sayısını hariç  0-1000 dahil olmak üzere çift syıları ekranda yazdırınız ancak 16 varsa program dursun
+// for (var i = 0; i <= 1000; i++) {
+//   if (i == 16) {
+//     break;
+//   }
+
+//   if (i === 6) {
+//     continue;
+//   }
+
+//   if (i % 2 == 0) {
+//     console.log(i + " ");
+//   }
+// }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+// var dizi = ["Elazığ", "Malatya", "Nevşehir", "İstanbul", "Ankara", 22,true];
+//for in : indis
+// for (var temp in dizi) {
+//   console.log(temp);
+// }
+
+// for (var temp in dizi) {
+//   console.log(dizi[temp]);
+// }
+
+//for of
+// for (var temp of dizi) {
+//   console.log(temp);
+// }
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+//global nesne
+// var adi = "Canan";
+
+// function adiSoyadi() {
+//   let soyadi = "Arslan";
+//   alert("adi: " + this.adi + " soyadım: " + soyadi);
+// }
+// //adiSoyadi();
+
+// function adiSoyadi2() {
+//   alert("adi: " + adi + " soyadım: " +soyadi);
+// }
+// adiSoyadi2();
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+//var: sadece globalde kullşanalı
+//let: fonkisyon,for
+
+// for (let i = 0; i <= 10; i++) {
+//   console.log(i);
+// }
+// console.log("*************************");
+
+// var i2 = 0;
+// while (i2 <= 10) {
+//   console.log(i2);
+//   i2++;
+// }
+
+// console.log("*************************");
+// var i3 = 0;
+// do {
+//   console.log(i3);
+//   i3++;
+// } while (i3 <= 10);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+// "use strict";
+//public ,private,protected,implements,interface,enum v.s
+// a = 5;
+//alert(a);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+// var tarih = new Date();
+//var tarih = new Date("2020 1 1");
+//günlerde: 1-31
+//aylar:0-11
+//saat:0-23
+//saniye:0-59
+
+// console.log(tarih);
+// console.log(tarih.toUTCString());
+// console.log(tarih.getDate());
+// console.log(tarih.getMinutes());
+// console.log(tarih.getTime());
+// console.log("sadasd: " + new Date(tarih.getTime()));
+
+// console.log(tarih.setDate(2));
+// console.log(tarih.getDate());
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+// var object1=new Object();   
+// var object2={}
+
+// var dizi1=new Array();   
+// var dizi2=[]
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// var x,y,z;
+// x=5;
+// debugger;
+// y=45;
+// z=63;
+// var m=x+y+z;
+// console.log(m);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// var x,y,z;
+// x=5;
+// y=45;
+// z=63;
+// var m=x+y+z;
+// console.log(m);
+// console.log(m);
+//////////////////////////////////////////////////
+//dizi
+var dizi=["İstanbul ", "Ankara","Muş","Van"]
+console.log(dizi);
+console.log(dizi[0].concat("sona44"));
+
+for(let index=0; index<dizi.length; index++){
+  console.log(dizi[index]);
+}
+//eklemek 
+//push sona eklemek
+dizi.push("sona ekledim");
+console.log(dizi);
+
+//unshift başa eklemek
+dizi.unshift("başa ekledim");
+console.log(dizi);
+
+//çıkarmak (sondan)
+dizi.pop();
+console.log(dizi);
+
+//baştaki elemandan bir eleman çıkar
+dizi.shift();
+console.log(dizi);
+
+//silmek için kullanılır.
+delete dizi[0];
+console.log(dizi);
+
+
+
+
+
+
+
+
